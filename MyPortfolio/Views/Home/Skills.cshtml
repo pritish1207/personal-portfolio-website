@@ -1,0 +1,31 @@
+﻿@model Dictionary<string, List<MyPortfolio.Models.SkillModel>>
+
+@{
+    ViewData["Title"] = "My Skills";
+}
+
+<div class="container content-section">
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="text-center lead mb-5">A snapshot of my technical capabilities and tools I work with.</p>
+
+    @foreach (var category in Model)
+    {
+        <h3 class="category-title">@category.Key</h3>
+        <div class="row">
+            @foreach (var skill in category.Value)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="skill-item">
+                        <h5 class="skill-name">@skill.SkillName</h5>
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar" role="progressbar" style="width: @skill.Proficiency%;" aria-valuenow="@skill.Proficiency" aria-valuemin="0" aria-valuemax="100">
+                                @skill.Proficiency%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <hr class="my-5" />
+    }
+</div>
