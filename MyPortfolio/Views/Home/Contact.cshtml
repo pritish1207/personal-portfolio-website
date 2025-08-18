@@ -1,48 +1,26 @@
-﻿@model MyPortfolio.Models.ContactViewModel
-
-@{
+﻿@{
     ViewData["Title"] = "Contact Me";
 }
 
-<div class="container content-section">
+<!-- ===== START OF NEW CONTACT SECTION ===== -->
+<div class="container content-section text-center">
     <h2 class="section-title">Get In Touch</h2>
-    <p class="text-center lead mb-5">Have a question or want to work together? Let's connect.</p>
-
+    <p class="text-center lead mb-5">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+    </p>
     <div class="row justify-content-center">
-        <div class="col-lg-8">
-
-            @if (TempData["SuccessMessage"] != null)
-            {
-                <div class="alert alert-success" role="alert">
-                    @TempData["SuccessMessage"]
-                </div>
-            }
-
-            <form asp-action="Contact" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
-                <div class="mb-3">
-                    <label asp-for="Name" class="form-label"></label>
-                    <input asp-for="Name" class="form-control form-control-lg" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-
-                <div class="mb-3">
-                    <label asp-for="Email" class="form-label"></label>
-                    <input asp-for="Email" class="form-control form-control-lg" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-
-                <div class="mb-3">
-                    <label asp-for="Message" class="form-label"></label>
-                    <textarea asp-for="Message" class="form-control form-control-lg" rows="5"></textarea>
-                    <span asp-validation-for="Message" class="text-danger"></span>
-                </div>
-
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                </div>
-            </form>
+        <div class="col-lg-6">
+            <!--
+                This is the mailto link. When clicked, it opens the user's default email client.
+                You can even pre-fill the subject line to know where the email came from.
+            -->
+            <a href="mailto:pritish7712@gmail.com?subject=Message from Portfolio Website" class="btn btn-primary btn-lg d-block">
+                <i class="fas fa-envelope me-2"></i> Click Here to Email Me
+            </a>
+            <p class="text-muted mt-3">
+                This will open your default email application.
+            </p>
         </div>
     </div>
 </div>
+<!-- ===== END OF NEW CONTACT SECTION ===== -->
