@@ -7,7 +7,7 @@ namespace MyPortfolio.Controllers
 {
     public class HomeController : Controller
     {
-        
+
         private List<ProjectModel> GetProjects()
         {
             return new List<ProjectModel>
@@ -18,7 +18,7 @@ namespace MyPortfolio.Controllers
                     Title = "Artist Website",
                     Description = "A modern, immersive portfolio and music hub for Pritish S. It features a visually earthy tone with aesthetic overlays, bold branding, and smooth animations. Visitors can explore my biography, browse a full discography, and connect via social media.",
                     ImageUrl = "/images/projects/artist.png",
-                    OfficialSiteUrl = "https://www.pritishs.com/", 
+                    OfficialSiteUrl = "https://www.pritishs.com/",
                     Technologies = new List<string> { "HTML5", "CSS3", "JavaScript", "UI/UX Design" }
                 },
                 new ProjectModel
@@ -35,7 +35,7 @@ namespace MyPortfolio.Controllers
                     Title = "ColourBounce WebGame",
                     Description = "A vibrant browser-based arcade game built with HTML5, CSS3, and JavaScript. Features real-time physics, responsive controls, dynamic ball movement, and increasing difficulty with animated obstacles. Fully custom design and code, optimized for desktop browsers.",
                     ImageUrl = "/images/projects/colourbounce.png",
-                    GitHubUrl = "https://github.com/pritish1207/colour-bounce.git", 
+                    GitHubUrl = "https://github.com/pritish1207/colour-bounce.git",
                     Technologies = new List<string> { "HTML5", "CSS3", "JavaScript", "Game Logic" }
                 },
                 new ProjectModel
@@ -44,7 +44,7 @@ namespace MyPortfolio.Controllers
                     Title = "Interactive Web-Based Music Player",
                     Description = "A feature-rich music player with a custom playlist, album art, real-time waveform visualization with click-and-drag seeking, and controls for volume, tempo, and pitch. Built with modern front-end technologies.",
                     ImageUrl = "/images/projects/musicplayer.png",
-                    GitHubUrl = "https://github.com/pritish1207/music-player-ui.git", 
+                    GitHubUrl = "https://github.com/pritish1207/music-player-ui.git",
                     Technologies = new List<string> { "HTML5", "CSS3", "JavaScript", "Audio Processing", "UI/UX" }
                 },
                 new ProjectModel
@@ -53,7 +53,7 @@ namespace MyPortfolio.Controllers
                     Title = "KineticGlass Cars - E-commerce Concept",
                     Description = "A fully responsive, single-page e-commerce experience built from scratch. Features a dynamic product catalogue rendered from a client-side data array, interactive filtering, details modals, and a stateful shopping cart. Implements a fluid 'glassmorphism' UI and GSAP animations.",
                     ImageUrl = "/images/projects/kinetic.png",
-                    GitHubUrl = "https://github.com/pritish1207/kinetic-glass-cars-portfolio.git", 
+                    GitHubUrl = "https://github.com/pritish1207/kinetic-glass-cars-portfolio.git",
                     Technologies = new List<string> { "JavaScript (ES6+)", "HTML5", "CSS3", "GSAP" }
                 },
                 new ProjectModel
@@ -64,13 +64,22 @@ namespace MyPortfolio.Controllers
                     ImageUrl = "/images/projects/portfolio.png",
                     Technologies = new List<string> { "C#", "ASP.NET Core MVC", ".NET 8", "Bootstrap" }
                 },
-                 new ProjectModel
+                new ProjectModel
                 {
                     Id = 7,
                     Title = "Classic Central Radio App (In Development)",
                     Description = "A modern Android application for Classic Central Radio, featuring live streaming, integrated media controls, user authentication (email, Google, Facebook), and a dynamic light/dark theme. Currently in active development.",
                     ImageUrl = "/images/projects/ccr.jpg",
                     Technologies = new List<string> { "Kotlin", "Android Studio", "Firebase", "Live Streaming" }
+                },
+                new ProjectModel
+                {
+                    Id = 8,
+                    Title = "MarketPulse - C# Stock Monitoring Application",
+                    Description = "A comprehensive desktop application built with C# and WPF to visualize real-time stock market data. The project showcases proficiency in modern development practices, including the MVVM architecture for separation of concerns, asynchronous REST API integration for fetching live JSON data, and dynamic data rendering using the LiveCharts2 library to create a responsive and intuitive user experience.",
+                    ImageUrl = "/images/projects/marketpulse.png",
+                    GitHubUrl = "https://github.com/pritish1207/MarketPulse-WPF-Project.git",
+                    Technologies = new List<string> { "C#", "WPF", "REST API", "JSON", "MVVM", "XAML", "LINQ" }
                 }
             };
         }
